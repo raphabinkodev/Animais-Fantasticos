@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <nav class="menu">
+    <nav class="menu js-menu">
         <ul>
             <li><a href="#animais">Animais</a></li>
             <li><a href="#faq">FAQ</a></li>
@@ -18,7 +18,7 @@
         </ul>
     </nav>
 
-    <section class="grid-section animais" id="animais">
+    <section class="grid-section animais js-scroll" id="animais">
         <h1 class="titulo">Animais Fantásticos</h1>
         <ul class="animais-lista js-tabmenu">
             <li>
@@ -42,7 +42,7 @@
         </ul>
 
         <div class="animais-descricao js-tabcontent">
-            <section>
+            <section data-anime = "show-right">
                 <h2>Raposa</h2>
                 <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte
                     médio, caracterizados por um focinho comprido e uma cauda longa e peluda. Também apresentam como
@@ -56,7 +56,7 @@
                     tundra e do gelo polar, desenvolveu pelagem branca e densa, além de orelhas curtas. Em português
                     dá-se o nome de regougar ao som emitido pela raposa.</p>
             </section>
-            <section>
+            <section data-anime = "show-right">
                 <h2>Esquilo</h2>
                 <p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte, conhecida
                     como Sciuridae. No Brasil, são também conhecidos como serelepe, caxinguelê, caxinxe,
@@ -72,7 +72,7 @@
                     os filhotes, que variam de 3 a 10 por ninhada. Quando adulto, as maiores espécies da família chegam
                     a medir de 53 a 73 cm de comprimento (com a cauda).</p>
             </section>
-            <section>
+            <section data-anime = "show-down">
                 <h2>Urso</h2>
                 <p>Os Ursos (latim científico: Ursidae) constituem uma família de mamíferos plantígrados, da ordem
                     Carnivora, geralmente de grande porte, contendo os ursos e os pandas. Embora classificado como urso,
@@ -86,7 +86,7 @@
                 <p>Os ursos existem em todos os continentes, em exceção na África, embora algumas fontes afirmem terem
                     avistado o Urso nandi, mas sem comprovarem a sua existência.</p>
             </section>
-            <section>
+            <section data-anime = "show-down">
                 <h2>Lobo</h2>
                 <p>Lobo-cinzento (nome científico: Canis lupus) é uma espécie de mamífero canídeo do gênero Canis. É um
                     sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás. É o
@@ -103,7 +103,7 @@
                     únicas quatro espécies classificadas como lobos. Os demais lobos correspondem a subespécies
                     derivadas das quatro espécies citadas anteriormente.</p>
             </section>
-            <section>
+            <section data-anime = "show-right">
                 <h2>Macaco</h2>
                 <p>Macaco é um termo de origem africana (provavelmente do banto makako) utilizado como designação comum
                     a todas as espécies de símios ou primatas antropoides. É aplicada restritivamente no Brasil aos
@@ -117,7 +117,7 @@
                 <p>Ainda segundo Cunha, o termo símio, que também designa os macacos (tendo sido registrado no português
                     dos séculos XVI e XVII), vem do latim simius, de simus, "que tem o nariz chato".</p>
             </section>
-            <section>
+            <section data-anime = "show-right">
                 <h2>Leão</h2>
                 <p>O leão [feminino: leoa] (nome científico: Panthera leo) é uma espécie de mamífero carnívoro do gênero
                     Panthera e da família Felidae. A espécie é atualmente encontrada na África subsaariana e na Ásia,
@@ -136,18 +136,10 @@
                     crepusculares, descansando e dormindo na maior parte do dia. Leões vivem por volta de 10-14 anos na
                     natureza, enquanto em cativeiro eles podem viver por até 30 anos. Alguns animais desenvolveram o
                     hábito de atacar e devorar humanos, ficando conhecidos como "devoradores de homens".</p>
-                <p>A espécie está classificada como "vulnerável" pela União Internacional para a Conservação da Natureza
-                    e dos Recursos Naturais (IUCN), e sofreu um declínio populacional de 30-50% nas últimas duas décadas
-                    no território africano. Na Ásia, o leão está confinado a uma única área protegida e sua população é
-                    estável, mas está classificado como "em perigo", já que a população não passa de 350 animais. Entre
-                    as ameaças, a perda de habitat e os conflitos com humanos são as principais razões de preocupação na
-                    sua conservação. Por centenas de anos, o leão tem sido usado como símbolo de bravura e nobreza em
-                    diversas civilizações e culturas da Europa, Ásia e África. Está amplamente representado em
-                    esculturas, pinturas, bandeiras nacionais, brasões, e em filmes e na literatura contemporâneos.</p>
             </section>
         </div>
     </section>
-    <section class="grid-section faq" id="faq">
+    <section class="grid-section faq js-scroll" id="faq">
         <h1 class="titulo">FAQ</h1>
         <dl class="faq-lista js-accordion">
             <dt>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, accusamus?</dt>
@@ -192,7 +184,7 @@
             </dd>
         </dl>
     </section>
-    <section class="grid-section contato" id="contato"> 
+    <section class="grid-section contato js-scroll" id="contato"> 
         <h1 class="titulo">Contato</h1>
         <div class="mapa">
             <img src="./img/mapa.png" alt="">

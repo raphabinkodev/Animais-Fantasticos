@@ -47,15 +47,68 @@ function tabContentNav () {
 }
 tabContentNav()
 
+
 function tabAccordion(){
     const accordionList = document.querySelectorAll('.js-accordion dt')
 
-    function activeAccordion(event) {
-        this.classList.add('active')
-        this.nextElementSibling.classList.add('active')
+    function activeAccordion() {
+        this.classList.toggle('active')
+        this.nextElementSibling.classList.toggle('active')
     }
 
     accordionList.forEach((item) => {
         item.addEventListener('click', activeAccordion)
     })
 }
+
+tabAccordion()
+
+//Scroll Suave para Link Interno
+function scrollSuave(){
+    const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]')
+
+    function scrollToSection(event) {
+        event.preventDefault()
+        const href = event.currentTarget.getAttribute('href')
+        const section = document.querySelector(href)
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        })
+
+        //Forma Alterantiva
+        // const topo = section.offsetTop;
+        // window.scrollTo({
+        //     top: topo,
+        //     behavior: 'smooth',
+        // })
+    }
+
+    linksInternos.forEach((link) => {
+        link.addEventListener('click', scrollToSection) 
+    })
+}
+
+scrollSuave()
+
+//Animação do Scroll
+function animarScroll(){
+    const sections = document.querySelectorAll('.js-scroll')
+    if(sections.length) {
+        const windowsHeight = window.innerHeight * 0.55
+        function animaScroll() {
+            sections.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top
+                const isSectionVisible = (sectionTop - windowsHeight) < 0
+                if (isSectionVisible)
+                    section.classList.add('active') 
+                // else if (sectionTop > 0){
+                //     section.classList.remove('active')
+                // }
+            })
+        }
+        animaScroll()
+        window.addEventListener('scroll', animaScroll)
+    }
+}
+animarScroll()

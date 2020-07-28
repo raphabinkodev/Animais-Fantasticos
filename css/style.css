@@ -129,6 +129,7 @@ body {
     margin-top: 2rem;
     margin-bottom: .5rem;
     color: #93B1A7;
+    cursor: pointer;
 }
 
 .faq-lista dt::before {
@@ -180,9 +181,33 @@ body {
     font-weight: bold;
 }
 
+
+/* Responsivo */
+
 @media (max-width: 760px) {
     body {
         grid-template-columns: 1fr;
+    }
+
+    .animais-descricao {
+        height: 370px;
+        overflow-y: scroll;
+        grid-column: 2;
+        cursor: pointer;
+    }
+
+    .animais-descricao::-webkit-scrollbar {
+        width: 18px;
+    }
+    
+    .animais-descricao::-webkit-scrollbar-thumb {
+        background-color: #B1E5F2;
+        border-left: 4px solid #E8E9F3;
+        border-right: 4px solid #E8E9F3;
+    }
+    
+    .animais-descricao::-webkit-scrollbar-track {
+        background-color: #E8E9F3;
     }
 
     .menu, .grid-section, .copy {
@@ -251,9 +276,38 @@ body {
 .js-accordion dt::after {
     content: '⤵';
     margin-left: 10px;
+    color: #222;
 }
 
-.js-accordion dt.ativo::after {
+.js-accordion dt.active::after {
     content: '⤴';
     margin-left: 10px;
+    color: #222;
+}
+
+.js-accordion dd.active {
+    display: block;
+    animation: slideDown .5 forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 300px;
+    }
+}
+
+.js-scroll{
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+    transition: .5s;
+}
+
+.js-scroll.active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
