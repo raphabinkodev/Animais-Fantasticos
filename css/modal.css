@@ -1,0 +1,72 @@
+.modal-container {
+    height: 100vh;
+    width: 100%;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.active {
+    display: flex;
+}
+
+.modal {
+    background-color: #222;
+    width: 520px;
+    padding: 12px;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 15px 4px #222;
+    position: relative;
+}
+
+.modal button {
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    font-size: 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    cursor: pointer;
+}
+
+.modal label {
+    font-family: 'IBM Plex Mono', monospace;
+    display: block;
+    margin: 1rem 0 .5rem 0;
+    text-align: center;
+}
+
+.modal input {
+    display: block;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: 30px;
+}
+
+.modal button:last-child {
+    display: block;
+    margin: 16px auto;
+    background-color: #93B1A7;
+    padding: 6px
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.active .modal {
+    animation: modal .8s forwards;
+}
