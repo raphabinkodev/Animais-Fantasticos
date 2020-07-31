@@ -4,9 +4,8 @@ export default function initDropdownMenu(){
     const dropdownMenus = document.querySelectorAll('[data-dropdown]')
 
     function handleClick(event) {
-        event.preventDefault();
         this.classList.add('active')
-        outsideClick(this, ['click', 'touchstart'], () => {
+        outsideClick(this, ['click', 'touchstart', 'onmouseenter'], () => {
             this.classList.remove('active')
         })
     }

@@ -1,7 +1,7 @@
 .modal-container {
     height: 100vh;
     width: 100%;
-    
+    background-color:rgba(64, 224, 208, 0.4);
     position: fixed;
     top: 0;
     left: 0;
@@ -44,18 +44,38 @@
 
 .modal input {
     display: block;
-    text-align: center;
     width: 400px;
     margin: 0 auto;
     box-sizing: border-box;
     height: 30px;
+    padding: 6px;
+}
+
+.modal textarea {
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    resize: none;
+    padding: 6px;
+}
+
+.modal p {
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    resize: none;
+    padding-top: 12px;
 }
 
 .modal button:last-child {
     display: block;
     margin: 16px auto;
+    width: 200px;
+    font-weight: bold;
     background-color: #93B1A7;
-    padding: 6px
+    padding: 6px;
 }
 
 @keyframes modal {
