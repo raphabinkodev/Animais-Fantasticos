@@ -1,6 +1,4 @@
-//Animação Menu
-import initMenu from './modules/init-menu.js'
-initMenu()
+
 //Navegação por Tab
 import tabContentNav from './modules/tab-content-nav.js'
 tabContentNav()
@@ -16,3 +14,6 @@ animarScroll()
 //Modal
 import initModal from './modules/modal.js'
 initModal()
+//Dropdown Menu
+import initiDropdownMenu from './modules/dropdown-menu.js'
+initiDropdownMenu()

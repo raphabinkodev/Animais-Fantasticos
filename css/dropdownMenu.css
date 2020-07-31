@@ -1,0 +1,64 @@
+[data-dropdown] {
+    position: relative;
+}
+
+[data-dropdown] .dropdown-menu {
+    display: none;
+}
+
+/* Maneira de Fazer com CSS */
+/* .datadropdown-menu:hover .dropdown-menu {
+    display: block;
+    animation: show-up .5s forwards;
+}
+
+@keyframes show-up {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 0, -30px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+} */
+/*******************************************/
+[data-dropdown].active .dropdown-menu {
+    display: block;
+    animation: show-up .5s forwards;
+}
+
+@keyframes show-up {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 0, -30px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: #B1E5F2;
+    border: 3px solid #CECECE;
+    box-shadow: 0 2px 18px 4px;
+    z-index: 1000;
+}
+
+.dropdown-menu::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    width: 0px;
+    height: 0px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 10px solid #CECECE;
+}
+
+.dropdown-menu li a:hover{
+    color: white;
+}
