@@ -7,13 +7,10 @@ export default function initMenuMobile() {
 
     if(menuButton){
         function openMenu(event) {
-            menuList.classList.add('active')
-            menuButton.classList.add('active')
+            menuList.classList.toggle('active')
+            menuButton.classList.toggle('active')
 
-            outsideClick(menuList, eventos, () => {
-                menuButton.classList.remove('active')
-                menuList.classList.remove('active')
-            })
+
         }
         eventos.forEach((evento) => {
             menuButton.addEventListener('click', openMenu)
