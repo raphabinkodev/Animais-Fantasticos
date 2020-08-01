@@ -55,4 +55,19 @@
         margin-top: 0;
     }
 
+    .modal {
+        width: 80%;
+    }
+
+    .modal input {
+        width: 80%;
+    }
+    
+    .modal textarea {
+        width: 80%;
+    }
+    
+    .modal p {
+        width: 80%;
+    }
 }

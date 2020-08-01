@@ -11,6 +11,7 @@ a {
 img {
     display: block;
     max-width: 100%;
+    margin: 0 auto;
 }
 
 ul {
@@ -180,11 +181,14 @@ body {
 .dados button {
     width: 200px;
     height: 32px;
-    margin-left: 65px;
+    margin-left: 40px;
     margin-top: 12px;
     background-color: #93B1A7;
+    box-shadow: 0 0 8px 1px;
     border: none;
+    font-weight: bold;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .copy {

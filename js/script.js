@@ -17,3 +17,6 @@ initModal()
 //Dropdown Menu
 import initiDropdownMenu from './modules/dropdown-menu.js'
 initiDropdownMenu()
+//Menu-Mobile
+import initMenuMobile from './modules/menu-mobile.js'
+initMenuMobile()
